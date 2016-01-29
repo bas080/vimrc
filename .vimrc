@@ -124,8 +124,8 @@
     nnoremap \| 080l
     nnoremap gb gT
     nnoremap gf <c-w>gf
-    noremap h b
-    noremap l w
+    noremap h F
+    noremap l f
     noremap H B
     noremap L W
     nnoremap qw <esc>:w<cr>
@@ -154,12 +154,13 @@
 
 " tex
 
-  function! UserTex()
+  function! UserLatex()
     nnoremap em I{\em <esc>A}<esc>
+    nnoremap bf I{\bf <esc>A}<esc>
     nnoremap <buffer> [ ?^ *\\<cr>
     nnoremap <buffer> ] /^ *\\<cr>
   endfunction
-  autocmd Filetype tex :call UserTex()
+  autocmd Filetype tex :call UserLatex()
 
 " javascript
 
@@ -174,8 +175,12 @@
     iabbr <buffer> U undefined
     iabbr <buffer> V var
 
-    nnoremap <buffer> ]] /(<cr>
-    nnoremap <buffer> [[ ?(<cr>
+    " nnoremap <buffer> ]] /(<cr>
+    nnoremap <buffer> /f /function<space>
+    noremap <buffer> [ :call searchpos('function', 'b')<cr>
+    noremap <buffer> ] :call searchpos('function')<cr>
+
+    " nnoremap <buffer> [[ ?(<cr>
 
   endfunction
   autocmd Filetype javascript :call UserJavascript()
@@ -194,8 +199,6 @@
     endfunction
     command! AutoConnect :call s:AutoConnect()
 
-    nnoremap <buffer> ]] /(\\|[<cr>
-    nnoremap <buffer> [[ ?[\\|(<cr>
     " vim fireplace already has keybindings cpp and cpr
     " nnoremap <buffer> el V:Eval<cr>
     " nnoremap <buffer> ef :%Eval<cr>
