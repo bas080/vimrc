@@ -187,10 +187,23 @@
 
     " should: also add to python and any language that uses , to seperate
     " arguments
-    nnoremap 1a 0f(e
-    nmap 2a 1af,e
-    nmap 3a 2af,e
-    nmap 4a 3af,e
+    nnoremap <buffer> 1a 0f(l
+    nmap <buffer> 2a 1a1f,w
+    nmap <buffer> 3a 1a2f,w
+    nmap <buffer> 4a 1a3f,w
+    nmap <buffer> 5a 1a4f,w
+
+    nmap c1a 1act,
+    nmap c2a 2act,
+    nmap c3a 3act,
+    nmap c4a 4act,
+    nmap c5a 5act,
+
+    nmap d1a 1adt,x
+    nmap d2a 2adt,x
+    nmap d3a 3adt,x
+    nmap d4a 4adt,x
+    nmap d5a 5adt,x
 
     " nnoremap <buffer> ]] /(<cr>
     nnoremap <buffer> /f /function<space>
