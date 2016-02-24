@@ -79,6 +79,16 @@
     noremap ; :
     noremap : ;
 
+    " inoremap 9 (
+    " inoremap 0 )
+    " inoremap ( 9
+    " inoremap ) 0
+
+    " inoremap [ {
+    " inoremap ] }
+    " inoremap { [
+    " inoremap } ]
+
     " fold
     vnoremap f :<c-u>silent! normal! [zV]z<cr>
     omap f :normal Vaf<cr>
@@ -174,6 +184,13 @@
     iabbr <buffer> C call
     iabbr <buffer> U undefined
     iabbr <buffer> V var
+
+    " should: also add to python and any language that uses , to seperate
+    " arguments
+    nnoremap 1a 0f(e
+    nmap 2a 1af,e
+    nmap 3a 2af,e
+    nmap 4a 3af,e
 
     " nnoremap <buffer> ]] /(<cr>
     nnoremap <buffer> /f /function<space>
