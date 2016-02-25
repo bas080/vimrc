@@ -175,6 +175,12 @@
 " javascript
 
   function! UserJavascript()
+
+    " jsdoc iabbrvs
+    iabbr <buffer> @p @param {
+    iabbr <buffer> @r @returns {
+    iabbr <buffer> @t @throws {
+
     iabbr <buffer> F function
     iabbr <buffer> A arguments
     iabbr <buffer> M Math
@@ -199,11 +205,11 @@
     nmap c4a 4act,
     nmap c5a 5act,
 
-    nmap d1a 1adt,x
-    nmap d2a 2adt,x
-    nmap d3a 3adt,x
-    nmap d4a 4adt,x
-    nmap d5a 5adt,x
+    nmap d1a 1adt,2x
+    nmap d2a 2adt,2x
+    nmap d3a 3adt,2x
+    nmap d4a 4adt,2x
+    nmap d5a 5adt,2x
 
     " nnoremap <buffer> ]] /(<cr>
     nnoremap <buffer> /f /function<space>
