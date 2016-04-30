@@ -28,124 +28,148 @@
   set colorcolumn=0
   set dictionary+=/usr/share/dict/words
   filetype plugin indent on
-  let mapleader = " "
+  let mapleader = "	"
 
 " global
 
-  function! UserGlobal()
+  " highlight the 80th column
 
-    " highlight the 80th column
-    highlight ColorColumn ctermbg=magenta
-    call matchadd('ColorColumn' , '\%81v', 100)
+  highlight ColorColumn ctermbg=magenta
+  call matchadd('ColorColumn' , '\%81v', 100)
 
-    " autocompletion without ctrl
+  " remove search highlighting
 
-    inoremap xd <c-x><c-d>
-    inoremap xf <c-x><c-f>
-    inoremap xi <c-x><c-i>
-    inoremap xk <c-x><c-k>
-    inoremap xl <c-x><c-l>
-    inoremap xn <c-x><c-n>
-    inoremap xp <c-x><c-p>
-    inoremap xv <c-x><c-v>
-    inoremap xy <c-x><c-y>
+  nnoremap <silent> <cr> :noh<cr><esc>
 
-    " disabled because are annoying
-    " inoremap xe <c-x><c-e>
-    " inoremap xo <c-x><c-o>
-    " inoremap xu <c-x><c-u>
+  " access mappings quicker without leaving home
 
-    " exit insert mode
+  nnoremap f `
 
-    nnoremap <leader><leader> i<space>
-    inoremap kk <esc>kl
-    inoremap kj <esc>l
-    inoremap jj <esc>jl
+  " jump from insert mode into visual selections
 
-    " switching between splits
-    autocmd WinEnter * execute ":normal! \<c-w>84|"
-    " autocmd BufHidden * execute ":resize 1000"
-    " au CursorHoldI * execute ":stopinsert"
-    autocmd FocusGained,BufEnter * :silent! !
-    nnoremap <c-w> :echom "Use <c-hjkl> instead"<cr>
-    nnoremap <c-j>  <c-w>j
-    nnoremap <c-k>  <c-w>k
-    nnoremap <c-h>  <c-w>h
-    nnoremap <c-l>  <c-w>l
-    nnoremap d<c-j> <c-w>j<c-w>c
-    nnoremap d<c-k> <c-w>k<c-w>c
-    nnoremap d<c-h> <c-w>h<c-w>c
-    nnoremap d<c-l> <c-w>l<c-w>c
-    noremap ; :
-    noremap : ;
+  inoremap <c-v> <esc>l<c-v>
 
-    " inoremap 9 (
-    " inoremap 0 )
-    " inoremap ( 9
-    " inoremap ) 0
+  " autocompletion without ctrl
 
-    " inoremap [ {
-    " inoremap ] }
-    " inoremap { [
-    " inoremap } ]
+  inoremap xd <c-x><c-d>
+  inoremap xf <c-x><c-f>
+  inoremap xi <c-x><c-i>
+  inoremap xk <c-x><c-k>
+  inoremap xl <c-x><c-l>
+  inoremap xn <c-x><c-n>
+  inoremap xp <c-x><c-p>
+  inoremap xv <c-x><c-v>
+  inoremap xy <c-x><c-y>
 
-    " fold
-    vnoremap f :<c-u>silent! normal! [zV]z<cr>
-    omap f :normal Vaf<cr>
+  " disabled because are annoying
+  " inoremap xe <c-x><c-e>
+  " inoremap xo <c-x><c-o>
+  " inoremap xu <c-x><c-u>
 
-    " shorthands for text objects. Mostly choose inner as default behavior.
-    " vnoremap w iw
-    " omap w :normal vw<cr>
+  " exit insert mode
 
-    " vnoremap " i"
-    " omap " :normal v"<cr>
+  inoremap kj <esc>l
+  inoremap kk <esc>kl
+  inoremap jj <esc>jl
 
-    " vnoremap ' i'
-    " omap ' :normal v'<cr>
+  " switching between splits
 
-    " vnoremap ( i(
-    " omap ( :normal v(<cr>
+  autocmd WinEnter * execute ":normal! \<c-w>84|"
+  autocmd FocusGained,BufEnter * :silent! !
 
-    " vnoremap [ i[
-    " omap [ :normal v[<cr>
+  nnoremap <c-w> :echom "Use <c-hjkl> instead"<cr>
+  nnoremap <c-j>  <c-w>j
+  nnoremap <c-k>  <c-w>k
+  nnoremap <c-h>  <c-w>h
+  nnoremap <c-l>  <c-w>l
 
-    " vnoremap { i{
-    " omap { :normal v{<cr>
+  " close/hide split
 
-    " vnoremap p ip
-    " omap p :normal vp<cr>
+  nnoremap d<c-j> <c-w>j<c-w>c
+  nnoremap d<c-k> <c-w>k<c-w>c
+  nnoremap d<c-h> <c-w>h<c-w>c
+  nnoremap d<c-l> <c-w>l<c-w>c
+  noremap ; :
+  noremap : ;
 
-    " nnoremap <leader>wp :normal! vipJ<esc>
+  " fold
 
-    " nnoremap vi< :silent! normal! F<f<lvh%h<cr>
-    " nnoremap vi> :silent! normal! F<f<lvh%h<cr>
+  vnoremap f :<c-u>silent! normal! [zV]z<cr>
+  omap f :normal Vaf<cr>
 
-    iabbr email bas080@hotmail.com
+  " shorthands for text objects. Mostly choose inner as default behavior.
+  " vnoremap w iw
+  " omap w :normal vw<cr>
 
-    inoremap qw <esc>:w<cr>
-    nnoremap !! V:!sh<cr>
-    nnoremap <c-x> i<c-x>
-    nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-    nnoremap <leader>f /
-    nnoremap <leader>nn :set number!<cr>
-    nnoremap <leader>sv :source $MYVIMRC<cr>
-    nnoremap J <pagedown>
-    nnoremap K <pageup>
-    nnoremap \| 080l
-    nnoremap gb gT
-    nnoremap gf <c-w>gf
-    noremap h F
-    noremap l f
-    noremap H B
-    noremap L W
-    nnoremap qw <esc>:w<cr>
-    nnoremap yj yyp
-    nnoremap yk yyP
-    noremap - dd<esc>p
-    noremap vv :normal! r! clipboard<cr>
+  " vnoremap " i"
+  " omap " :normal v"<cr>
 
-  endfunction
-  autocmd VimEnter * :call UserGlobal()
+  " vnoremap ' i'
+  " omap ' :normal v'<cr>
+
+  " vnoremap ( i(
+  " omap ( :normal v(<cr>
+
+  " vnoremap [ i[
+  " omap [ :normal v[<cr>
+
+  " vnoremap { i{
+  " omap { :normal v{<cr>
+
+  " vnoremap p ip
+  " omap p :normal vp<cr>
+
+  " nnoremap <leader>wp :normal! vipJ<esc>
+
+  " nnoremap vi< :silent! normal! F<f<lvh%h<cr>
+  " nnoremap vi> :silent! normal! F<f<lvh%h<cr>
+
+  iabbr email bas080@hotmail.com
+
+  inoremap qw <esc>:w<cr>
+
+  " execute shell commands
+
+  nnoremap !! V:!sh<cr>
+  vnoremap !! :!sh<cr>
+
+  " vimrc shortcuts
+
+  nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+  nnoremap <leader>sv :source $MYVIMRC<cr>
+
+  " Use h, j, k and l more
+  nnoremap J <pagedown>
+  nnoremap K <pageup>
+  noremap h F
+  noremap l f
+  noremap H B
+  noremap L W
+
+
+  " jump to 80th collumn
+
+  nnoremap \| 080l
+  nnoremap gb gT
+
+  " save and quit insert mode
+
+  nnoremap qw <esc>:w<cr>
+
+  " move one line up or down
+
+  nnoremap <c-j> :m .+1<CR>==
+  nnoremap <c-k> :m .-2<CR>==
+  inoremap <c-j> <Esc>:m .+1<CR>==gi
+  inoremap <c-k> <Esc>:m .-2<CR>==gi
+  vnoremap <c-j> :m '>+1<CR>gv=gv
+  vnoremap <c-k> :m '<-2<CR>gv=gv
+
+  " paste quicker instead of ctrl+shift+v in insert
+
+  nnoremap vv :r! clipboard<cr>
+  imap vv <esc>vv
+
 
 " HTML
 
@@ -180,16 +204,6 @@
     iabbr <buffer> @p @param {
     iabbr <buffer> @r @returns {
     iabbr <buffer> @t @throws {
-
-    iabbr <buffer> F function
-    iabbr <buffer> A arguments
-    iabbr <buffer> M Math
-    iabbr <buffer> R return
-    iabbr <buffer> Y apply(this, arguments);
-    iabbr <buffer> P prototype
-    iabbr <buffer> C call
-    iabbr <buffer> U undefined
-    iabbr <buffer> V var
 
     " should: also add to python and any language that uses , to seperate
     " arguments
