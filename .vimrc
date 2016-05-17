@@ -75,7 +75,10 @@
   " switching between splits
 
   autocmd WinEnter * execute ":normal! \<c-w>84|"
+  " reload when focussed
   autocmd FocusGained,BufEnter * :silent! !
+  " write when losing focus
+  autocmd FocusLost,WinLeave * :silent! w
 
   nnoremap <c-w> :echom "Use <c-hjkl> instead"<cr>
   nnoremap <c-j>  <c-w>j
