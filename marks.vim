@@ -1,0 +1,2 @@
+nnoremap J ]'
+nnoremap K ['
