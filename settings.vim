@@ -35,3 +35,4 @@ filetype plugin indent on
 set modelines=0
 let mapleader=' '
 set encoding=utf-8
+autocmd FocusLost,WinLeave * :silent! w
