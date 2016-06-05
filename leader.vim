@@ -18,28 +18,40 @@ nnoremap <leader>wgk <c-w>k
 nnoremap <leader>wgh <c-w>h
 nnoremap <leader>wgl <c-w>l
 
-"git
+"git: performed on current file
 
-"git-add: current file
+"git-add
 nnoremap <leader>ga :!git add %<cr>
 
-"git-commit
-nnoremap <leader>gc :!git commit -m 
-
-"git-remove: current file
+"git-remove
 nnoremap <leader>gr :!git rm %<cr>
 
-"git-move: current file
+"git-move
 nnoremap <leader>gm :!git mv % 
+
+"git-diff
+nnoremap <leader>gd :!git diff %<cr>
+
+"git-log
+nnoremap <leader>gl :!git log %<cr>
+
+"git: performed on repository
+
+"git pull
+
+nnoremap <leader>gp :!git pull<cr>
 
 "git-status
 nnoremap <leader>gs :!git status<cr>
 
-"git-diff: current file
-nnoremap <leader>gd :!git diff %<cr>
+"git-commit
+nnoremap <leader>gc :!git commit -m "
 
-"git-log: current file
-nnoremap <leader>gl :!git log %<cr>
+"git-diff
+nnoremap <leader>gdd :!git diff<cr>
+
+"git-fetch
+nnoremap <leader>gf :!git fetch<cr>
 
 "buffer
 
