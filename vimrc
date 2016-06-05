@@ -1,5 +1,5 @@
 "set-directory
-let g:vimpath="/home/bas/development/vimrc/"
+let g:vimpath=fnamemodify(resolve(expand('<sfile>:p')), ':h')
 
 "source the vimrc in the current directory if it is there
 if filereadable(getcwd() . "/.vimrc")
@@ -7,11 +7,11 @@ if filereadable(getcwd() . "/.vimrc")
 endif
 
 "sourcing
-autocmd Filetype javascript :exec "source " vimpath . "javascript.vim"
-exec "source " vimpath . "settings.vim"
-exec "source " vimpath . "marks.vim"
-exec "source " vimpath . "completion.vim"
-exec "source " vimpath . "leader.vim"
+autocmd Filetype javascript :exec "source " vimpath . "/javascript.vim"
+exec "source " vimpath . "/settings.vim"
+exec "source " vimpath . "/marks.vim"
+exec "source " vimpath . "/completion.vim"
+exec "source " vimpath . "/leader.vim"
 
 "easier-%
 nnoremap <tab> %
@@ -86,3 +86,6 @@ nnoremap vv :r! clipboard<cr>
 
 "pathogen
 execute pathogen#infect()
+
+"theme
+set background=dark
