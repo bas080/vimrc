@@ -124,3 +124,11 @@ nnoremap <leader>dg :cd %:p:h<cr>:pwd<cr>
 
 "directory-local: change the buffer's directory to the current file's
 nnoremap <leader>dl :lcd %:p:h<cr>:pwd<cr>
+
+"split
+
+"split-vertically
+nnoremap <leader>sv :vsplit<cr>
+
+"split-horizontally
+nnoremap <leader>sh :split<cr>
