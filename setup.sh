@@ -14,5 +14,10 @@ sudo apt-get install git ack-grep -y && \
   cd ~/.vim/bundle && \
   git clone https://github.com/mileszs/ack.vim
 
+  #setup colorscheme
+  mkdir -p ~/.vim/colors/ && \
+  cd ~/.vim/colors/ && \
+  wget https://raw.githubusercontent.com/andreasvc/vim-256noir/master/colors/256_noir.vim
+
 echo ""
 echo add the following line to your vimrc \"source $dirname/vimrc\"
