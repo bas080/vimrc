@@ -39,7 +39,7 @@ nnoremap <leader>gs :!git status<cr>
 nnoremap <leader>gd :!git diff %<cr>
 
 "git-log: current file
-nnoremap <leader> gl :!git log %<cr>
+nnoremap <leader>gl :!git log %<cr>
 
 "buffer
 
@@ -83,7 +83,7 @@ nnoremap <leader>lw gqip
 "paragraph-wrap
 nnoremap <leader>pw vipJgqip
 
-"vim*
+"vim
 
 "vimrc-edit: start editing the vimrc in a split
 nnoremap <leader>ve :vsplit $MYVIMRC<cr>
@@ -95,9 +95,11 @@ nnoremap <leader>vs :source $MYVIMRC<cr>
 nnoremap <leader>vd :exec "lcd " . vimpath<cr>:pwd<cr>
 
 "directory
-nnoremap <leader>dl :!ls -l<cr>
 
-"directory-print
+"directory-files
+nnoremap <leader>df :!ls -l<cr>
+
+"directory-print: print the current directory
 nnoremap <leader>dp :pwd<cr>
 
 "directory-global: change all buffers directories to current file's
