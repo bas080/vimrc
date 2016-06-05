@@ -2,8 +2,8 @@
 let g:vimpath=fnamemodify(resolve(expand('<sfile>:p')), ':h')
 
 "source the vimrc in the current directory if it is there
-if filereadable(getcwd() . "/.vimrc")
-  execute ":source " . getcwd() . "/.vimrc"
+if filereadable(getcwd() . "/.vim")
+  execute ":source " . getcwd() . "/.vim"
 endif
 
 "sourcing
@@ -16,15 +16,11 @@ exec "source " vimpath . "/leader.vim"
 "easier-%
 nnoremap <tab> %
 vnoremap <tab> %
-nnoremap % :echom "use tab instead"<cr>
+nnoremap % :echom "WARNING: use tab to jump to matching brackets"<cr>
 
 "better-search
 nnoremap / /\v
 vnoremap / /\v
-
-"highlight-the-80th-column
-highlight ColorColumn ctermbg=magenta
-call matchadd('ColorColumn' , '\%81v', 100)
 
 "remove-search-highlighting-on-enter
 nnoremap <silent> <cr> :noh<cr><esc>
@@ -48,7 +44,7 @@ nnoremap <c-h>  <c-w>h
 nnoremap <c-l>  <c-w>l
 
 "switching-between-splits: resize-split-to-80
-autocmd WinEnter * execute ":normal! \<c-w>84|"
+autocmd WinEnter * execute ":normal! \<c-w>88|"
 autocmd FocusGained,BufEnter * :silent! !
 
 "switch-;-to-acces-commandmode-without-shift
@@ -87,5 +83,8 @@ nnoremap vv :r! clipboard<cr>
 "pathogen
 execute pathogen#infect()
 
-"theme
+"background
 set background=dark
+
+"colorscheme
+colorscheme 256_noir
