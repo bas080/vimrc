@@ -1,8 +1,9 @@
-"private-vimrc
-source ~/.private.vim
+"set-directory
+let g:vimpath="/home/bas/development/vimrc/"
 
-if filereadable('./project.vim')
-  source ./project.vim
+"source the vimrc in the current directory if it is there
+if filereadable(getcwd() . "/.vimrc")
+  execute ":source " . getcwd() . "/.vimrc"
 endif
 
 "sourcing
@@ -82,6 +83,6 @@ vnoremap <a-k> :m '<-2<CR>gv=gv
 
 "paste-from-clipboard-requires-bash
 nnoremap vv :r! clipboard<cr>
-"pathogen
 
+"pathogen
 execute pathogen#infect()
