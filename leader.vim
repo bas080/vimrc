@@ -91,6 +91,9 @@ nnoremap <leader>ve :vsplit $MYVIMRC<cr>
 "vimrc-source: source the ~/.vimrc
 nnoremap <leader>vs :source $MYVIMRC<cr>
 
+"vimrc-local: source the vimrc in the current directory
+nnoremap <leader>vl :source .vimrc
+
 "vimstinct-directory: does it only for the (local)buffer
 nnoremap <leader>vd :exec "lcd " . vimpath<cr>:pwd<cr>
 
