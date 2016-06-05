@@ -1,3 +1,5 @@
+set nocompatible
+set hidden
 set relativenumber
 set incsearch
 set ignorecase
@@ -18,7 +20,6 @@ set expandtab
 set foldmethod=indent
 set list
 set listchars=tab:▸\ ,eol:⋅
-set nocompatible
 set noswapfile
 set number
 set numberwidth=1
@@ -32,6 +33,8 @@ set colorcolumn=85
 filetype off
 set dictionary+=/usr/share/dict/words
 filetype plugin indent on
+set t_Co=256
+colorscheme 256_noir
 set modelines=0
 let mapleader=' '
 set encoding=utf-8
