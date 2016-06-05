@@ -37,9 +37,11 @@ nnoremap <leader>gl :!git log %<cr>
 
 "git: performed on repository
 
-"git pull
+"git push
+nnoremap <leader>gp :!git push<cr>
 
-nnoremap <leader>gp :!git pull<cr>
+"git pull
+nnoremap <leader>gpp :!git pull<cr>
 
 "git-status
 nnoremap <leader>gs :!git status<cr>
