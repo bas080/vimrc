@@ -40,20 +40,15 @@ inoremap kj <esc>l
 inoremap kk <esc>kl
 inoremap jj <esc>jl
 
-"switching-between-splits(resize-split-to-80)
-autocmd WinEnter * execute ":normal! \<c-w>84|"
-autocmd FocusGained,BufEnter * :silent! !
-"switching-between-splits(move using c-(hjkl))
+"switching-between-splits
 nnoremap <c-j>  <c-w>j
 nnoremap <c-k>  <c-w>k
 nnoremap <c-h>  <c-w>h
 nnoremap <c-l>  <c-w>l
 
-"close/hide-split
-nnoremap d<c-j> <c-w>j<c-w>c
-nnoremap d<c-k> <c-w>k<c-w>c
-nnoremap d<c-h> <c-w>h<c-w>c
-nnoremap d<c-l> <c-w>l<c-w>c
+"switching-between-splits: resize-split-to-80
+autocmd WinEnter * execute ":normal! \<c-w>84|"
+autocmd FocusGained,BufEnter * :silent! !
 
 "switch-;-to-acces-commandmode-without-shift
 noremap ; :
