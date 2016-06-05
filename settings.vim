@@ -29,12 +29,11 @@ set so=1000
 set tabstop=2
 set textwidth=79
 set formatoptions=qrn1
-set colorcolumn=85
+set colorcolumn=
 filetype off
 set dictionary+=/usr/share/dict/words
 filetype plugin indent on
 set t_Co=256
-colorscheme 256_noir
 set modelines=0
 let mapleader=' '
 set encoding=utf-8
