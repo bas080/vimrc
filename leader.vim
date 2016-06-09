@@ -60,6 +60,12 @@ nnoremap <leader>gf :!git fetch<cr>
 "buffer-indent: perform indentation on file
 nnoremap <leader>bi ggVG=``
 
+"buffer-remove-emptylines: remove white lines and 
+nnoremap <leader>bre :g/^\s*$/d<cr>
+
+"buffer-remove-trailing-whitespace
+nnoremap <leader>brtw :%s/\s\+$//<cr>
+
 "tab
 
 "tab-edit
@@ -68,10 +74,19 @@ nnoremap <leader>te :tabedit
 "tab-only
 nnoremap <leader>to :tabonly<cr>
 
+"tab-move
+nnoremap <leader>tm :tabmove 
+
 "file: current file
 
 "file-executable: make current file executable
 nnoremap <leader>fe :!chmod +x %<cr>
+
+"file-spellingcheck
+nnoremap <leader>fs :!aspell check %<cr>
+
+"file-diretory: change the buffer's directory to the current file's
+nnoremap <leader>fd :lcd %:p:h<cr>:pwd<cr>
 
 "search: requires bash scripts
 
@@ -121,9 +136,6 @@ nnoremap <leader>dp :pwd<cr>
 
 "directory-global: change all buffers directories to current file's
 nnoremap <leader>dg :cd %:p:h<cr>:pwd<cr>
-
-"directory-local: change the buffer's directory to the current file's
-nnoremap <leader>dl :lcd %:p:h<cr>:pwd<cr>
 
 "split
 
