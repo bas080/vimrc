@@ -4,5 +4,7 @@ iabbr <buffer> @r @returns
 iabbr <buffer> @e @throws
 iabbr <buffer> @t @todo
 
-"arugments
+"line
 
+"line-comment
+nnoremap <leader>lc I* <esc>A *<esc>yypv$r*$r/kP^v$r*^r/
