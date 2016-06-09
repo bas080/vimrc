@@ -14,6 +14,7 @@ set nolinebreak
 set autoindent
 set ruler
 set undofile
+set undodir=~/.vim/undo
 set cc=+1
 set cursorline
 set expandtab
