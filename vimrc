@@ -13,6 +13,9 @@ exec "source " vimpath . "/marks.vim"
 exec "source " vimpath . "/completion.vim"
 exec "source " vimpath . "/leader.vim"
 
+"quicker change dirctory(locally)
+nnoremap cd :lcd 
+
 "easier-%
 nnoremap <tab> %
 vnoremap <tab> %
@@ -53,6 +56,7 @@ noremap : ;
 
 "write-to-file-and-leave-insert
 inoremap qw <esc>:w<cr>
+nnoremap qw <esc>:w<cr>
 
 "execute-shell-commands
 nnoremap !! V:!sh<cr>
