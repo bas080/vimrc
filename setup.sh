@@ -7,7 +7,7 @@ dirname=$(cd "$(dirname "$0")/.."; pwd)
 sudo apt-get install git ack-grep -y && \
 
   #install pathogen
-  mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+  mkdir -p ~/.vim/undo ~/.vim/autoload ~/.vim/bundle && \
   curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim && \
 
   #install the plugins
