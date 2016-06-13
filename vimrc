@@ -6,6 +6,14 @@ if filereadable(getcwd() . "/.vim")
   execute ":source " . getcwd() . "/.vim"
 endif
 
+"autocmds
+"
+""remove white space on before buffer write
+autocmd BufWritePre * :%s/\s\+$//e
+
+""save when loses focus
+autocmd FocusLost,WinLeave * :silent! w
+
 "sourcing
 autocmd Filetype javascript :exec "source " vimpath . "/javascript.vim"
 exec "source " vimpath . "/settings.vim"
@@ -28,9 +36,11 @@ vnoremap / /\v
 "remove-search-highlighting-on-enter
 nnoremap <silent> <cr> :noh<cr><esc>
 
-"access-marks-quicker
-nnoremap f `
-nnoremap F :marks<cr>
+"use f to search threw stuff
+nnoremap f /\v
+nnoremap F ?\v
+nnoremap / :echo "WARNING: use f instead"<cr>
+nnoremap ? :echo "WARNING: use F instead"<cr>
 
 "jump-from-insert-mode-into-visual-selections
 inoremap <c-v> <esc><c-v>

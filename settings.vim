@@ -38,4 +38,3 @@ set t_Co=256
 set modelines=0
 let mapleader=' '
 set encoding=utf-8
-autocmd FocusLost,WinLeave * :silent! w
