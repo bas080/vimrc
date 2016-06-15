@@ -12,7 +12,7 @@ nnoremap <leader>wck <c-w>k<c-w>c
 nnoremap <leader>wch <c-w>h<c-w>c
 nnoremap <leader>wcl <c-w>l<c-w>c
 
-"windows-go: 
+"windows-go:
 nnoremap <leader>wgj <c-w>j
 nnoremap <leader>wgk <c-w>k
 nnoremap <leader>wgh <c-w>h
@@ -27,13 +27,16 @@ nnoremap <leader>ga :!git add %<cr>
 nnoremap <leader>gr :!git rm %<cr>
 
 "git-move
-nnoremap <leader>gm :!git mv % 
+nnoremap <leader>gm :!git mv %
 
 "git-diff
 nnoremap <leader>gd :!git diff %<cr>
 
 "git-log
 nnoremap <leader>gl :!git log %<cr>
+
+""blame
+nnoremap <leader>gb :!git blame %<cr>
 
 "git: performed on repository
 
@@ -47,7 +50,7 @@ nnoremap <leader>gpp :!git pull<cr>
 nnoremap <leader>gs :!git status<cr>
 
 "git-commit
-nnoremap <leader>gc :!git commit -m "
+nnoremap <leader>gc :!git commit -m ""<left>
 
 "git-diff
 nnoremap <leader>gdd :!git diff<cr>
@@ -60,7 +63,7 @@ nnoremap <leader>gf :!git fetch<cr>
 "buffer-indent: perform indentation on file
 nnoremap <leader>bi ggVG=``
 
-"buffer-remove-emptylines: remove white lines and 
+"buffer-remove-emptylines: remove white lines and
 nnoremap <leader>bre :g/^\s*$/d<cr>
 
 "buffer-remove-trailing-whitespace
@@ -69,13 +72,13 @@ nnoremap <leader>brtw :%s/\s\+$//<cr>
 "tab
 
 "tab-edit
-nnoremap <leader>te :tabedit 
+nnoremap <leader>te :tabedit<space>
 
 "tab-only
 nnoremap <leader>to :tabonly<cr>
 
 "tab-move
-nnoremap <leader>tm :tabmove 
+nnoremap <leader>tm :tabmove<space>
 
 "file: current file
 
@@ -91,16 +94,16 @@ nnoremap <leader>fd :lcd %:p:h<cr>:pwd<cr>
 "search: requires bash scripts
 
 "search-google
-nnoremap <leader>sg :!google 
+nnoremap <leader>sg :!google<space>
 
 "search-duckduckgo
-nnoremap <leader>sd :!duckduckgo 
+nnoremap <leader>sd :!duckduckgo<space>
 
 "search-files: does a grep and opens results in a new shell with vim
-nnoremap <leader>sf :!grim 
+nnoremap <leader>sf :!grim<space>
 
 "ack
-nnoremap <leader>a :Ack 
+nnoremap <leader>a :Ack<space>
 
 "line
 
