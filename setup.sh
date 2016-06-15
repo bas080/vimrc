@@ -17,7 +17,7 @@ sudo apt-get install git ack-grep -y && \
   #setup colorscheme
   mkdir -p ~/.vim/colors/ && \
   cd ~/.vim/colors/ && \
-  wget https://raw.githubusercontent.com/andreasvc/vim-256noir/master/colors/256_noir.vim
+  curl 'https://raw.githubusercontent.com/bas080/vim-256noir/master/colors/256_noir.vim' > '256_noir.vim'
 
 echo ""
 echo add the following line to your vimrc \"source $dirname/vimrc\"
