@@ -32,10 +32,6 @@ nnoremap <tab> %
 vnoremap <tab> %
 nnoremap % :echom "WARNING: use tab to jump to matching brackets"<cr>
 
-"better-search
-nnoremap / /\v
-vnoremap / /\v
-
 "remove-search-highlighting-on-enter
 nnoremap <silent> <cr> :noh<cr><esc>
 
