@@ -1,12 +1,13 @@
-"contains the leader mappings. You should think of them as external commands or
-"special features that out of the scope of basic editing
+" contains the leader mappings. You should think of them as external commands or
+" special features that out of the scope of basic editing
 
-"shell: opens a bash shell within the current shell
+" shell: opens a bash shell within the current shell
 nnoremap <leader>s :!bash<cr>
+nnoremap <leader>s :!gnome-session-quit --logout --no-prompt<cr>
 
-"windows
+" windows
 
-"windows-close: closes the window you are pointing at
+"" close: closes the window you are pointing at
 nnoremap <leader>wcj <c-w>j<c-w>c
 nnoremap <leader>wck <c-w>k<c-w>c
 nnoremap <leader>wch <c-w>h<c-w>c
@@ -18,21 +19,29 @@ nnoremap <leader>wgk <c-w>k
 nnoremap <leader>wgh <c-w>h
 nnoremap <leader>wgl <c-w>l
 
-"git: performed on current file
+"" split
 
-"git-add
-nnoremap <leader>ga :!git add %<cr>
+""" vertically
+nnoremap <leader>wsv :vsplit<cr>
 
-"git-remove
+""" horizontally
+nnoremap <leader>wsh :split<cr>
+
+" git: performed on current file
+
+"" add
+nnoremap <leader>ga :silent !git add %<cr>:redraw!<cr>
+
+"" remove
 nnoremap <leader>gr :!git rm %<cr>
 
-"git-move
-nnoremap <leader>gm :!git mv %
+"" move
+nnoremap <leader>gm :!git mv %<space>
 
-"git-diff
+"" diff
 nnoremap <leader>gd :!git diff %<cr>
 
-"git-log
+"" log
 nnoremap <leader>gl :!git log %<cr>
 
 ""blame
@@ -40,55 +49,55 @@ nnoremap <leader>gb :!git blame %<cr>
 
 "git: performed on repository
 
-"git push
+"" push
 nnoremap <leader>gp :!git push<cr>
 
-"git pull
+"" pull
 nnoremap <leader>gpp :!git pull<cr>
 
-"git-status
+"" status
 nnoremap <leader>gs :!git status<cr>
 
-"git-commit
-nnoremap <leader>gc :!git commit -m ""<left>
+"" commit
+nnoremap <leader>gc :silent !git commit -m ""<left>
 
-"git-diff
+"" diff
 nnoremap <leader>gdd :!git diff<cr>
 
-"git-fetch
+"" fetch
 nnoremap <leader>gf :!git fetch<cr>
 
-"buffer
+" buffer
 
-"buffer-indent: perform indentation on file
+"" indent: perform indentation on file
 nnoremap <leader>bi ggVG=``
 
-"buffer-remove-emptylines: remove white lines and
+"remove-emptylines: remove white lines and
 nnoremap <leader>bre :g/^\s*$/d<cr>
 
-"buffer-remove-trailing-whitespace
+"remove-trailing-whitespace
 nnoremap <leader>brtw :%s/\s\+$//<cr>
 
-"tab
+" tab
 
-"tab-edit
+"" edit
 nnoremap <leader>te :tabedit<space>
 
-"tab-only
+"" only
 nnoremap <leader>to :tabonly<cr>
 
-"tab-move
+"" move
 nnoremap <leader>tm :tabmove<space>
 
-"file: current file
+" file: current file
 
-"file-executable: make current file executable
+"" executable: make current file executable
 nnoremap <leader>fe :!chmod +x %<cr>
 
-"file-spellingcheck
+"" spellingcheck
 nnoremap <leader>fs :!aspell check %<cr>
 
-"file-diretory: change the buffer's directory to the current file's
+"" diretory: change the buffer's directory to the current file's
 nnoremap <leader>fd :lcd %:p:h<cr>:pwd<cr>
 
 "search: requires bash scripts
@@ -102,48 +111,59 @@ nnoremap <leader>sd :!duckduckgo<space>
 "search-files: does a grep and opens results in a new shell with vim
 nnoremap <leader>sf :!grim<space>
 
-"ack
+" web: requires bash scripts
+
+"" google
+nnoremap <leader>wg :!google
+
+"" duckduckgo
+nnoremap <leader>wd :!duckduckgo
+
+" ack: requires vim ack
 nnoremap <leader>a :Ack<space>
 
-"line
+" line
 
-"line-wrap
+"" wrap
 nnoremap <leader>lw gqip
 
-"paragraph
+" paragraph
 
-"paragraph-wrap
+"" wrap
 nnoremap <leader>pw vipJgqip
 
-"vim
+" vim
 
-"vimrc-edit: start editing the vimrc in a split
+"" edit: start editing the vimrc in a split
 nnoremap <leader>ve :vsplit $MYVIMRC<cr>
 
-"vimrc-source: source the ~/.vimrc
+"" source: source the ~/.vimrc
 nnoremap <leader>vs :source $MYVIMRC<cr>
 
-"vimrc-local: source the .vim in the current directory
+"" local: source the .vim in the current directory
 nnoremap <leader>vl :source .vim<cr>
 
-"vimstinct-directory: does it only for the (local)buffer
+"" directory: changes the directory to the vimpath
 nnoremap <leader>vd :exec "lcd " . vimpath<cr>:pwd<cr>
 
-"directory
+" directory
 
-"directory-files
+"" files
 nnoremap <leader>df :!ls -l<cr>
 
-"directory-print: print the current directory
+"" print: print the current directory
 nnoremap <leader>dp :pwd<cr>
 
-"directory-global: change all buffers directories to current file's
+"" global: change all buffers directories to current file's
 nnoremap <leader>dg :cd %:p:h<cr>:pwd<cr>
 
-"split
+" split
 
-"split-vertically
+"" vertically
 nnoremap <leader>sv :vsplit<cr>
 
-"split-horizontally
+"" horizontally
 nnoremap <leader>sh :split<cr>
+
+"" local: change the buffer's directory to the current file's
+nnoremap <leader>dl :lcd %:p:h<cr>:pwd<cr>

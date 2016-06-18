@@ -14,6 +14,9 @@ autocmd BufWritePre * :%s/\s\+$//e
 ""save when loses focus
 autocmd FocusLost,WinLeave * :silent! w
 
+"repeat command
+nnoremap , @:
+
 "sourcing
 autocmd Filetype javascript :exec "source " vimpath . "/javascript.vim"
 exec "source " vimpath . "/settings.vim"
@@ -22,7 +25,7 @@ exec "source " vimpath . "/completion.vim"
 exec "source " vimpath . "/leader.vim"
 
 "quicker change dirctory(locally)
-nnoremap cd :lcd 
+nnoremap cd :lcd<space>
 
 "easier-%
 nnoremap <tab> %
