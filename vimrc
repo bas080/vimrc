@@ -20,9 +20,12 @@ nnoremap , @:
 "sourcing
 autocmd Filetype javascript :exec "source " vimpath . "/javascript.vim"
 exec "source " vimpath . "/settings.vim"
-exec "source " vimpath . "/marks.vim"
 exec "source " vimpath . "/completion.vim"
 exec "source " vimpath . "/leader.vim"
+
+"move lines up or down
+nnoremap K ddkkp
+nnoremap J ddp
 
 "quicker change dirctory(locally)
 nnoremap cd :lcd<space>
@@ -64,7 +67,7 @@ noremap ; :
 noremap : ;
 
 "write-to-file-and-leave-insert
-inoremap qw <esc>:w<cr>
+inoremap qw <esc>:w<cr>``
 nnoremap qw <esc>:w<cr>
 
 "execute-shell-commands
