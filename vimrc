@@ -27,19 +27,8 @@ exec "source " vimpath . "/leader.vim"
 "quicker change dirctory(locally)
 nnoremap cd :lcd<space>
 
-"easier-%
-nnoremap <tab> %
-vnoremap <tab> %
-nnoremap % :echom "WARNING: use tab to jump to matching brackets"<cr>
-
 "remove-search-highlighting-on-enter
 nnoremap <silent> <cr> :noh<cr><esc>
-
-"use f to search threw stuff
-nnoremap f /\v
-nnoremap F ?\v
-nnoremap / :echo "WARNING: use f instead"<cr>
-nnoremap ? :echo "WARNING: use F instead"<cr>
 
 "jump-from-insert-mode-into-visual-selections
 inoremap <c-v> <esc><c-v>
@@ -71,13 +60,6 @@ nnoremap qw <esc>:w<cr>
 nnoremap !! V:!sh<cr>
 vnoremap !! :!sh<cr>
 inoremap !! <esc>V:!sh<cr>
-
-"make-h-and-l-find
-noremap h F
-noremap l f
-
-"jump-to-80th-collumn
-nnoremap \| 080l
 
 "no-need-to-press-shift-to-jump-back-a-tab
 nnoremap gb gT
