@@ -3,7 +3,6 @@
 
 " shell: opens a bash shell within the current shell
 nnoremap <leader>s :!bash<cr>
-nnoremap <leader>s :!gnome-session-quit --logout --no-prompt<cr>
 
 " windows
 
