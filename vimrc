@@ -11,9 +11,6 @@ endif
 ""remove white space on before buffer write
 autocmd BufWritePre * :%s/\s\+$//e
 
-""save when loses focus
-autocmd FocusLost,WinLeave * :silent! w
-
 "repeat command
 nnoremap , @:
 
