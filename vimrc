@@ -19,6 +19,7 @@ autocmd Filetype javascript :exec "source " vimpath . "/javascript.vim"
 exec "source " vimpath . "/settings.vim"
 exec "source " vimpath . "/completion.vim"
 exec "source " vimpath . "/leader.vim"
+exec "source " vimpath . "/movement.vim"
 
 "move lines up or down
 nnoremap K ddkkp
