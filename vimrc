@@ -19,6 +19,7 @@ autocmd Filetype javascript :exec "source " vimpath . "/javascript.vim"
 exec "source " vimpath . "/settings.vim"
 exec "source " vimpath . "/completion.vim"
 exec "source " vimpath . "/leader.vim"
+exec "source " vimpath . "/window.vim"
 exec "source " vimpath . "/movement.vim"
 
 "move lines up or down
@@ -27,6 +28,8 @@ nnoremap J ddp
 
 "quicker change dirctory(locally)
 nnoremap cd :lcd<space>
+nnoremap ls :ls<cr>
+nnoremap pwd :pwd<cr>
 
 "remove-search-highlighting-on-enter
 nnoremap <silent> <cr> :noh<cr><esc>
@@ -38,16 +41,6 @@ inoremap <c-v> <esc><c-v>
 inoremap kj <esc>l
 inoremap kk <esc>kl
 inoremap jj <esc>jl
-
-"switching-between-splits
-nnoremap <c-j>  <c-w>j
-nnoremap <c-k>  <c-w>k
-nnoremap <c-h>  <c-w>h
-nnoremap <c-l>  <c-w>l
-
-"switching-between-splits: resize-split-to-80
-autocmd WinEnter * execute ":normal! \<c-w>88|"
-autocmd FocusGained,BufEnter * :silent! !
 
 "switch-;-to-acces-commandmode-without-shift
 noremap ; :
