@@ -22,15 +22,6 @@ exec "source " vimpath . "/leader.vim"
 exec "source " vimpath . "/window.vim"
 exec "source " vimpath . "/movement.vim"
 
-"move lines up or down
-nnoremap K ddkkp
-nnoremap J ddp
-
-"quicker change dirctory(locally)
-nnoremap cd :lcd<space>
-nnoremap ls :ls<cr>
-nnoremap pwd :pwd<cr>
-
 "remove-search-highlighting-on-enter
 nnoremap <silent> <cr> :noh<cr><esc>
 

@@ -1,10 +1,11 @@
-" easier ^ and $
-nnoremap J $
-nnoremap K ^
-
 "make-h-and-l-find
 noremap h F
 noremap l f
+nnoremap L ;
+nnoremap H ,
+
+nnoremap J <A-j>
+nnoremap K <A-k>
 
 "use f to search threw stuff
 nnoremap f /\v

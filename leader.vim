@@ -99,6 +99,9 @@ nnoremap <leader>fs :!aspell check %<cr>
 "" diretory: change the buffer's directory to the current file's
 nnoremap <leader>fd :lcd %:p:h<cr>:pwd<cr>
 
+"" display directory
+nnoremap <leader>pwd :pwd<cr>
+
 "search: requires bash scripts
 
 "search-google
