@@ -14,14 +14,6 @@ autocmd BufWritePre * :%s/\s\+$//e
 "repeat command
 nnoremap , @:
 
-"sourcing
-autocmd Filetype javascript :exec "source " vimpath . "/javascript.vim"
-exec "source " vimpath . "/settings.vim"
-exec "source " vimpath . "/completion.vim"
-exec "source " vimpath . "/leader.vim"
-exec "source " vimpath . "/window.vim"
-exec "source " vimpath . "/movement.vim"
-
 "remove-search-highlighting-on-enter
 nnoremap <silent> <cr> :noh<cr><esc>
 
@@ -49,19 +41,26 @@ inoremap !! <esc>V:!sh<cr>
 "no-need-to-press-shift-to-jump-back-a-tab
 nnoremap gb gT
 
-"move one line up or down
-nnoremap <a-j> :m .+1<CR>==
-nnoremap <a-k> :m .-2<CR>==
-inoremap <a-j> <Esc>:m .+1<CR>==gi
-inoremap <a-k> <Esc>:m .-2<CR>==gi
-vnoremap <a-j> :m '>+1<CR>gv=gv
-vnoremap <a-k> :m '<-2<CR>gv=gv
-
 "paste-from-clipboard-requires-bash
 nnoremap vv :r! clipboard<cr>
 
 "pathogen
 execute pathogen#infect()
+
+"sourcing after plugins
+autocmd BufReadPre *.pls    :exec "source " vimpath . "/playlist.vim"
+autocmd Filetype javascript :exec "source " vimpath . "/javascript.vim"
+autocmd Filetype clojure    :exec "source " vimpath . "/clojure.vim"
+exec "source " vimpath . "/edit.vim"
+exec "source " vimpath . "/settings.vim"
+exec "source " vimpath . "/completion.vim"
+exec "source " vimpath . "/leader.vim"
+exec "source " vimpath . "/window.vim"
+exec "source " vimpath . "/movement.vim"
+exec "source " vimpath . "/tabs.vim"
+
+"plugins
+let g:move_key_modifier = 'c'
 
 "background
 set background=dark

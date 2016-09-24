@@ -68,6 +68,12 @@ nnoremap <leader>gf :!git fetch<cr>
 
 " buffer
 
+nnoremap <leader>cd  :cd<space>
+nnoremap <leader>ccd :cd<space>%:p:h<cr>
+
+nnoremap <leader>lcd  :lcd<space>
+nnoremap <leader>lccd :lcd<space>%:p:h<cr>
+
 "" indent: perform indentation on file
 nnoremap <leader>bi ggVG=``
 
@@ -95,9 +101,6 @@ nnoremap <leader>fe :!chmod +x %<cr>
 
 "" spellingcheck
 nnoremap <leader>fs :!aspell check %<cr>
-
-"" diretory: change the buffer's directory to the current file's
-nnoremap <leader>fd :lcd %:p:h<cr>:pwd<cr>
 
 "" display directory
 nnoremap <leader>pwd :pwd<cr>
