@@ -4,6 +4,7 @@ iabbr <buffer> @r @returns
 iabbr <buffer> @e @throws
 iabbr <buffer> @t @todo
 iabbr <buffer> cl console.log
+let b:syntastic_checkers = ['eslint']
 
 "line
 
