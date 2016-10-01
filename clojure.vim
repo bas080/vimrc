@@ -1,0 +1,1 @@
+nnoremap = :Eval<cr>

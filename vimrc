@@ -58,6 +58,12 @@ exec "source " vimpath . "/leader.vim"
 exec "source " vimpath . "/window.vim"
 exec "source " vimpath . "/movement.vim"
 exec "source " vimpath . "/tabs.vim"
+exec "source " vimpath . "/command.vim"
+exec "source " vimpath . "/git.vim"
+exec "source " vimpath . "/buffer.vim"
+exec "source " vimpath . "/bash.vim"
+exec "source " vimpath . "/split.vim"
+exec "source " vimpath . "/text.vim"
 
 "plugins
 let g:move_key_modifier = 'c'
