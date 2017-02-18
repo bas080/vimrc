@@ -7,8 +7,6 @@ nnoremap H ,
 "use f to search threw stuff
 nnoremap f /\v
 nnoremap F ?\v
-nnoremap / :echo "WARNING: use f instead"<cr>
-nnoremap ? :echo "WARNING: use F instead"<cr>
 
 "easier-%
 nnoremap <tab> %
