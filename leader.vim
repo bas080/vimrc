@@ -28,4 +28,5 @@ nnoremap <leader>wg :!google
 nnoremap <leader>wd :!duckduckgo
 
 " ack: requires vim ack
-nnoremap <leader>a :Ack<space>
+nnoremap <leader>a :Ack!<space>
+vnoremap <leader>a y:Ack! <c-r>=fnameescape(@")<cr><cr>

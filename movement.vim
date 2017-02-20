@@ -1,6 +1,10 @@
 "make-h-and-l-find
-noremap h F
-noremap l f
+nnoremap h F
+nnoremap l f
+
+vnoremap h F
+vnoremap l f
+
 nnoremap L ;
 nnoremap H ,
 

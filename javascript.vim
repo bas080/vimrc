@@ -10,3 +10,5 @@ let b:syntastic_checkers = ['eslint']
 
 "line-comment
 nnoremap <leader>lc I* <esc>A *<esc>yypv$r*$r/kP^v$r*^r/
+
+nnoremap cl :normal!Iconsole.log(<esc>$F;i)<esc>

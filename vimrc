@@ -22,8 +22,8 @@ inoremap <c-v> <esc><c-v>
 
 "exit-insert-mode
 inoremap kj <esc>l
-inoremap kk <esc>kl
-inoremap jj <esc>jl
+inoremap kk <esc>klk
+inoremap jj <esc>jlj
 
 "switch-;-to-acces-commandmode-without-shift
 noremap ; :
