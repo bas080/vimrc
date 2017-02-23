@@ -1,1 +1,1 @@
-nnoremap = :Eval<cr>
+nnoremap <leader>! :Eval<cr>
