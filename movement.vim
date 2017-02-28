@@ -1,8 +1,12 @@
 "make-h-and-l-find
-noremap h F
-noremap l f
+nnoremap h F
+nnoremap l f
 nnoremap L ;
 nnoremap H ,
+vnoremap h F
+vnoremap l f
+vnoremap L ;
+vnoremap H ,
 
 "use f to search threw stuff
 nnoremap f /\v
