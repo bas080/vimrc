@@ -10,3 +10,9 @@ let b:syntastic_checkers = ['eslint']
 
 "line-comment
 nnoremap <leader>lc I* <esc>A *<esc>yypv$r*$r/kP^v$r*^r/
+
+function! ConsoleLog(name)
+  call append(".", "console.log(".a:name.")")
+endfunction
+
+nnoremap cl :call ConsoleLog(expand("<cword>"))<cr>
