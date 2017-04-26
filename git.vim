@@ -36,6 +36,9 @@ nnoremap <leader>gc :silent !git commit -m ""<left>
 "" diff
 nnoremap <leader>gdd :!git diff<cr>
 
+"" diff --staged
+nnoremap <leader>gdc :!git diff --staged<cr>
+
 "" fetch
 nnoremap <leader>gf :!git fetch<cr>
 
