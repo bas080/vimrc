@@ -14,9 +14,12 @@ nnoremap f /\v
 nnoremap F ?\v
 
 "easier-%
-nnoremap <tab> %
-vnoremap <tab> %
-nnoremap % :echom "WARNING: use tab to jump to matching brackets"<cr>
+nnoremap s %
+vnoremap s %
+
+nnoremap <tab> *
+vnoremap <tab> *
+nnoremap * :echom "WARNING: use tab to jump to matching symbol"<cr>
 
 "jump-to-80th-collumn
 nnoremap \| 080l
