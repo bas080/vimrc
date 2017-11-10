@@ -17,9 +17,7 @@ nnoremap F ?\v
 nnoremap s %
 vnoremap s %
 
+"jump words
 nnoremap <tab> *
 vnoremap <tab> *
 nnoremap * :echom "WARNING: use tab to jump to matching symbol"<cr>
-
-"jump-to-80th-collumn
-nnoremap \| 080l
