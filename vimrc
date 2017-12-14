@@ -63,7 +63,6 @@ exec "source " vimpath . "/git.vim"
 exec "source " vimpath . "/buffer.vim"
 exec "source " vimpath . "/split.vim"
 exec "source " vimpath . "/text.vim"
-exec "source " vimpath . "/move.vim"
 exec "source " vimpath . "/file.vim"
 
 "plugins
