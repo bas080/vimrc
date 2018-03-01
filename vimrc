@@ -38,9 +38,6 @@ nnoremap !! V:!sh<cr>
 vnoremap !! :!sh<cr>
 inoremap !! <esc>V:!sh<cr>
 
-"no-need-to-press-shift-to-jump-back-a-tab
-nnoremap gb gT
-
 "paste-from-clipboard-requires-bash
 nnoremap vv :r! clipboard<cr>
 
