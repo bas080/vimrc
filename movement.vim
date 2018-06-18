@@ -9,6 +9,10 @@ vnoremap l f
 vnoremap L ;
 vnoremap H ,
 
+nnoremap jj zj
+nnoremap kk zk
+set timeoutlen=400
+
 "use f to search threw stuff
 nnoremap f /\v
 nnoremap F ?\v
