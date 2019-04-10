@@ -15,7 +15,6 @@ set autoindent
 set ruler
 set undofile
 set undodir=~/.vim/undo
-set cc=+1
 set cursorline
 set expandtab
 set foldmethod=indent
@@ -30,7 +29,6 @@ set so=1000
 set tabstop=2
 set textwidth=79
 set formatoptions=qrn1
-set colorcolumn=
 filetype off
 set dictionary+=/usr/share/dict/words
 filetype plugin indent on
@@ -38,3 +36,6 @@ set t_Co=256
 set modelines=0
 let mapleader=' '
 set encoding=utf-8
+
+highlight OverLength ctermbg=red ctermfg=white
+match OverLength /\%81v.\+/
