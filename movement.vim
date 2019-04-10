@@ -22,6 +22,6 @@ nnoremap s %
 vnoremap s %
 
 "jump words
-nnoremap <tab> *
+nnoremap <tab> *vey
 vnoremap <tab> *
 nnoremap * :echom "WARNING: use tab to jump to matching symbol"<cr>
