@@ -9,13 +9,17 @@ vnoremap l f
 vnoremap L ;
 vnoremap H ,
 
-nnoremap jj zj
-nnoremap kk zk
 set timeoutlen=400
 
 "use f to search threw stuff
 nnoremap f /\v
 nnoremap F ?\v
+nnoremap j n
+nnoremap k N
+nnoremap J j
+nnoremap K k
+nnoremap n b
+nnoremap N B
 
 "easier-%
 nnoremap s %
