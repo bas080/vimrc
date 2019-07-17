@@ -41,9 +41,6 @@ inoremap !! <esc>V:!sh<cr>
 "paste-from-clipboard-requires-bash
 nnoremap vv :r! clipboard<cr>
 
-"pathogen
-execute pathogen#infect()
-
 "sourcing after plugins
 autocmd BufReadPre *.pls    :exec "source " vimpath . "/playlist.vim"
 autocmd Filetype javascript :exec "source " vimpath . "/javascript.vim"
@@ -64,9 +61,3 @@ exec "source " vimpath . "/file.vim"
 
 "plugins
 let g:move_key_modifier = 'c'
-
-"background
-set background=dark
-
-"colorscheme
-colorscheme 256_noir
