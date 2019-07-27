@@ -1,3 +1,4 @@
+set autochdir
 set nocompatible
 set hidden
 set relativenumber
@@ -36,6 +37,5 @@ set t_Co=256
 set modelines=0
 let mapleader=' '
 set encoding=utf-8
-
 highlight OverLength ctermbg=red ctermfg=white
 match OverLength /\%81v.\+/
