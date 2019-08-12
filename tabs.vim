@@ -2,6 +2,7 @@ nnoremap <leader>te :tabedit<space>
 nnoremap <leader>tm :tabmove<space>
 nnoremap <leader>to :tabonly<cr>
 nnoremap <leader>tn :tabnew<cr>
+nnoremap <leader>ts :tabnew<cr>:setlocal buftype=nofile bufhidden=hide noswapfile<cr>
 
 nnoremap <leader>1 1gt
 nnoremap <leader>2 2gt
