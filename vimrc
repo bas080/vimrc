@@ -42,7 +42,6 @@ inoremap !! <esc>V:!sh<cr>
 nnoremap vv :r! clipboard<cr>
 
 "sourcing after plugins
-autocmd BufReadPre *.pls    :exec "source " vimpath . "/playlist.vim"
 autocmd Filetype javascript :exec "source " vimpath . "/javascript.vim"
 autocmd Filetype clojure    :exec "source " vimpath . "/clojure.vim"
 exec "source " vimpath . "/edit.vim"
