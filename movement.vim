@@ -14,10 +14,8 @@ set timeoutlen=400
 "use f to search threw stuff
 nnoremap f /\v
 nnoremap F ?\v
-nnoremap j n
-nnoremap k N
-nnoremap J j
-nnoremap K k
+nnoremap J n
+nnoremap K N
 nnoremap n b
 nnoremap N B
 
