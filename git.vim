@@ -31,13 +31,14 @@ nnoremap <leader>gpp :!git pull<cr>
 nnoremap <leader>gs :!git status<cr>
 
 "" commit
-nnoremap <leader>gc :silent !git commit -m ""<left>
+nnoremap <leader>gc :!git commit<cr>
 
 "" diff
 nnoremap <leader>gdd :!git diff<cr>
 
 "" diff --staged
 nnoremap <leader>gdc :!git diff --staged<cr>
+nnoremap <leader>gds :!git diff --staged<cr>
 
 "" fetch
 nnoremap <leader>gf :!git fetch<cr>
