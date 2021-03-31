@@ -2,8 +2,8 @@
 let g:vimpath=fnamemodify(resolve(expand('<sfile>:p')), ':h')
 
 "source the vimrc in the current directory if it is there
-if filereadable(getcwd() . "/.vim")
-  execute ":source " . getcwd() . "/.vim"
+if filereadable(getcwd() . "/.local.vimrc")
+  execute ":source " . getcwd() . "/.local.vimrc"
 endif
 
 "autocmds
@@ -34,9 +34,9 @@ inoremap qw <esc>:w<cr>``
 nnoremap qw <esc>:w<cr>
 
 "execute-shell-commands
-nnoremap !! V:!sh<cr>
-vnoremap !! :!sh<cr>
-inoremap !! <esc>V:!sh<cr>
+nnoremap !! V:!bash<cr>
+vnoremap !! :!bash<cr>
+inoremap !! <esc>V:!bash<cr>
 
 "paste-from-clipboard-requires-bash
 nnoremap vv :r! clipboard<cr>

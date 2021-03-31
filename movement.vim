@@ -9,11 +9,11 @@ vnoremap l f
 vnoremap L ;
 vnoremap H ,
 
-set timeoutlen=400
-
-"use f to search threw stuff
 nnoremap f /\v
 nnoremap F ?\v
+vnoremap f /\v
+vnoremap F ?\v
+
 nnoremap J n
 nnoremap K N
 nnoremap n b
@@ -25,5 +25,6 @@ vnoremap s %
 
 "jump words
 nnoremap <tab> *vey
+nnoremap <s-tab> #vey
 vnoremap <tab> *
 nnoremap * :echom "WARNING: use tab to jump to matching symbol"<cr>

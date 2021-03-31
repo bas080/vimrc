@@ -1,2 +1,0 @@
-nnoremap J ]'
-nnoremap K ['

@@ -1,7 +1,7 @@
 set autochdir
+set timeoutlen=400
 set nocompatible
 set hidden
-set relativenumber
 set incsearch
 set ignorecase
 set smartcase
@@ -13,21 +13,25 @@ set hlsearch
 set nowrap
 set nolinebreak
 set autoindent
-set ruler
+set noruler
+set noshowcmd
 set undofile
 set undodir=~/.vim/undo
-set cursorline
+"set cursorline
 set expandtab
 set foldmethod=indent
-set list
-set listchars=tab:▸\ ,eol:⋅
+"set list
+"set listchars=eol:
 set noswapfile
-set number
+set relativenumber
 set numberwidth=1
+set number
+highlight LineNr ctermfg=darkgrey
 set shiftwidth=2
 set softtabstop=2
 set so=1000
 set tabstop=2
+set showtabline=0
 set textwidth=79
 set formatoptions=qrn1
 filetype off
