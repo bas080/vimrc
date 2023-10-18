@@ -48,7 +48,6 @@ exec "source " vimpath . "/edit.vim"
 exec "source " vimpath . "/settings.vim"
 exec "source " vimpath . "/completion.vim"
 exec "source " vimpath . "/leader.vim"
-exec "source " vimpath . "/window.vim"
 exec "source " vimpath . "/movement.vim"
 exec "source " vimpath . "/tabs.vim"
 exec "source " vimpath . "/command.vim"
@@ -58,6 +57,7 @@ exec "source " vimpath . "/split.vim"
 exec "source " vimpath . "/text.vim"
 exec "source " vimpath . "/file.vim"
 exec "source " vimpath . "/surround.vim"
+exec "source " vimpath . "/history.vim"
 
 "plugins
 let g:move_key_modifier = 'c'
