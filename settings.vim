@@ -26,7 +26,7 @@ set noswapfile
 set relativenumber
 set numberwidth=1
 set number
-highlight LineNr ctermfg=darkgrey
+set termguicolors
 set shiftwidth=2
 set softtabstop=2
 set so=1000
@@ -41,5 +41,6 @@ set t_Co=256
 set modelines=0
 let mapleader=' '
 set encoding=utf-8
-highlight OverLength ctermbg=red ctermfg=white
+highlight OverLength guifg=red ctermfg=red
 match OverLength /\%81v.\+/
+highlight LineNr guifg=#333333

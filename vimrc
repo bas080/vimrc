@@ -57,6 +57,7 @@ exec "source " vimpath . "/buffer.vim"
 exec "source " vimpath . "/split.vim"
 exec "source " vimpath . "/text.vim"
 exec "source " vimpath . "/file.vim"
+exec "source " vimpath . "/surround.vim"
 
 "plugins
 let g:move_key_modifier = 'c'

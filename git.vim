@@ -4,6 +4,8 @@
 "" add
 nnoremap <leader>ga :silent !git add %<cr>:redraw!<cr>
 
+nnoremap <leader>gf :silent !git add %; git commit --fixup=HEAD<cr>:redraw!<cr>
+
 "" remove
 nnoremap <leader>gr :!git rm %<cr>
 
