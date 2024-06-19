@@ -1,18 +1,18 @@
-"set-directory
-let g:vimpath=fnamemodify(resolve(expand('<sfile>:p')), ':h')
-
-"source the vimrc in the current directory if it is there
-if filereadable(getcwd() . "/.local.vimrc")
-  execute ":source " . getcwd() . "/.local.vimrc"
-endif
-
-"autocmds
-"
 ""remove white space on before buffer write
 autocmd BufWritePre * :%s/\s\+$//e
 
-"repeat command
+"repeat last run command
 nnoremap , @:
+
+let g:ctrlp_cmd = 'CtrlPMixed'
+
+" run using bash
+nmap <bar> V<bar><cr>
+vnoremap <bar> :!bash<cr>
+
+" run prettier on files (consider writting a meta prettier tool)
+nmap \ V\
+vnoremap \ :!prettier --stdin-filepath %<cr>
 
 "remove-search-highlighting-on-enter
 nnoremap <silent> <cr> :noh<cr><esc>
@@ -21,9 +21,20 @@ nnoremap <silent> <cr> :noh<cr><esc>
 inoremap <c-v> <esc><c-v>
 
 "exit-insert-mode
+inoremap Kj <esc>l
+inoremap KJ <esc>l
 inoremap kj <esc>l
-inoremap kk <esc>klk
-inoremap jj <esc>jlj
+inoremap jj <esc>lj
+inoremap kk <esc>lk
+inoremap <esc> <nop>
+
+" Map moving up/down in completion
+inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-x>\<C-u>"
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-x>\<C-u>"
+
+"squash lines into one
+vnoremap <enter> J
+vnoremap <space> J
 
 "switch-;-to-acces-commandmode-without-shift
 noremap ; :
@@ -33,17 +44,14 @@ noremap : ;
 inoremap qw <esc>:w<cr>``
 nnoremap qw <esc>:w<cr>
 
-"execute-shell-commands
-nnoremap !! V:!bash<cr>
-vnoremap !! :!bash<cr>
-inoremap !! <esc>V:!bash<cr>
+"shift-u-for-redu
+nnoremap U <C-r>
+nnoremap <c-r> :echom "HINT: <c-r> to redo was re-mapped to `U"<cr>
 
-"paste-from-clipboard-requires-bash
-nnoremap vv :r! clipboard<cr>
+"autocmds
+let g:vimpath=fnamemodify(resolve(expand('<sfile>:p')), ':h')
 
 "sourcing after plugins
-autocmd Filetype javascript :exec "source " vimpath . "/javascript.vim"
-autocmd Filetype clojure    :exec "source " vimpath . "/clojure.vim"
 exec "source " vimpath . "/edit.vim"
 exec "source " vimpath . "/settings.vim"
 exec "source " vimpath . "/completion.vim"
@@ -54,7 +62,6 @@ exec "source " vimpath . "/command.vim"
 exec "source " vimpath . "/git.vim"
 exec "source " vimpath . "/buffer.vim"
 exec "source " vimpath . "/split.vim"
-exec "source " vimpath . "/text.vim"
 exec "source " vimpath . "/file.vim"
 exec "source " vimpath . "/surround.vim"
 exec "source " vimpath . "/history.vim"

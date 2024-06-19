@@ -27,9 +27,6 @@ nnoremap J n
 nnoremap K N
 vnoremap J n
 vnoremap K N
-"And have <Enter> squash selected lines into a single one
-vnoremap <space> J
-nnoremap <space> J
 
 "in case i typo the b with the right hand by pressing n.
 nnoremap n b

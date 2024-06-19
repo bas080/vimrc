@@ -1,8 +1,7 @@
-"" indent: perform indentation on file
-nnoremap <leader>bi ggVG=``
+"paste from system clipboard
+nnoremap <leader>p :r! clipboard<cr>
+vnoremap <leader>p x:r! clipboard<cr>
 
-"remove-emptylines: remove white lines and
-nnoremap <leader>bre :g/^\s*$/d<cr>
-
-"remove-trailing-whitespace
-nnoremap <leader>brtw :%s/\s\+$//<cr>
+"yank to system clipboard
+nmap <leader>y V<leader>y
+vnoremap <leader>y :!cat - <bar> clipboard<cr>u

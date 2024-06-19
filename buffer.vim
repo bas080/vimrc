@@ -1,7 +1,8 @@
-nnoremap wq :wq<cr>
-
+nnoremap <leader>wq :wq<cr>
+nnoremap <leader>w  :w<cr>
 nnoremap <leader>e  :edit<space>
 nnoremap <leader>b  :buffer<space>
+nnoremap <leader>l  :ls<cr>
 nnoremap <leader>ls :ls<cr>
 nnoremap <leader>sa :saveas<space>
 

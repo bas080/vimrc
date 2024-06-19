@@ -26,7 +26,6 @@ set noswapfile
 set relativenumber
 set numberwidth=1
 set number
-set termguicolors
 set shiftwidth=2
 set softtabstop=2
 set so=1000
@@ -37,10 +36,11 @@ set formatoptions=qrn1
 filetype off
 set dictionary+=/usr/share/dict/words
 filetype plugin indent on
-set t_Co=256
 set modelines=0
 let mapleader=' '
 set encoding=utf-8
-highlight OverLength guifg=red ctermfg=red
+highlight OverLength ctermfg=red
 match OverLength /\%81v.\+/
-highlight LineNr guifg=#333333
+highlight LineNr ctermfg=black
+highlight Search cterm=none ctermbg=black
+highlight MatchParen cterm=none ctermbg=black
